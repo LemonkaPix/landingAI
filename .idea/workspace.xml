@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26126f07-4368-4299-96ad-7bcfa35dbddb" name="Changes" comment="Network">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="26126f07-4368-4299-96ad-7bcfa35dbddb" name="Changes" comment="Functions for agent and saving and loading checkpoints">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,13 +97,22 @@
       <option name="project" value="LOCAL" />
       <updated>1748184383916</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Functions for agent and saving and loading checkpoints">
+      <option name="closed" value="true" />
+      <created>1748186593094</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748186593094</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creating enviroment" />
     <MESSAGE value="optimalization" />
     <MESSAGE value="Network" />
-    <option name="LAST_COMMIT_MESSAGE" value="Network" />
+    <MESSAGE value="Functions for agent and saving and loading checkpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="Functions for agent and saving and loading checkpoints" />
   </component>
 </project>

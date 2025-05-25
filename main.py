@@ -110,14 +110,47 @@ def load_checkpoint(model, optimizer, filename):
     return episode
 
 env = gym.make("LunarLander-v3", render_mode="human")
+state_size = env.observation_space.shape[0]
+action_size = env.action_space.n
+agent = DQNAgent(state_size, action_size)
 
-env.reset()
-terminated = False
-truncated = False
+rewards_history = []
+epsilion_history = []
+loss_history = []
 
-while not (terminated or truncated):
-    action = 1
-    obs, reward, terminated, truncated, info = env.step(action)
-    env.render()
+episodes = 1000
+for episode in range(episodes):
+    state, _ = env.reset()
+    done = False
 
+    total_reward = 0
+    total_mse_loss = 0
+    step_counter = 0
+
+    while not done:
+        action = agent.act(state)
+        next_state, reward, done, _, _ = env.step(action)
+        total_reward += reward
+
+        agent.memorize(state, action, reward, next_state, done)
+        state = next_state
+        step_counter += 1
+
+        mse_loss = agent.replay()
+        if mse_loss is not None:
+            total_mse_loss += mse_loss
+
+        if done:
+            average_loss = total_mse_loss / step_counter if  step_counter > 0 else 0
+            print(f'Episode: {episode+1}/{episodes}, Reward: {total_reward:.2f},'
+                  f'Epsilion: {agent.epsilion_greedy:.3f}, MSE: {total_mse_loss:.3f},'
+                  f'Loss: {math.sqrt(total_mse_loss):.2f}')
+            rewards_history.append(total_reward)
+            epsilion_history.append(agent.epsilion_greedy)
+            loss_history.append(math.sqrt(average_loss))
+            break
+
+    if episode % 10 == 0:
+        save_checkpoint(agent.model, agent.optimizer,
+                        episode, filename=f'model_checkpoint_{episode}.pth')
 env.close()
