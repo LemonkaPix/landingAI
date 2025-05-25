@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26126f07-4368-4299-96ad-7bcfa35dbddb" name="Changes" comment="creating enviroment">
+    <list default="true" id="26126f07-4368-4299-96ad-7bcfa35dbddb" name="Changes" comment="Network">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -30,7 +30,8 @@
     "Python.main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "settings.editor.selected.configurable": "editor.preferences.folding"
   }
 }]]></component>
   <component name="RunManager">
@@ -81,11 +82,29 @@
       <option name="project" value="LOCAL" />
       <updated>1748182195763</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="optimalization">
+      <option name="closed" value="true" />
+      <created>1748183979801</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748183979801</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Network">
+      <option name="closed" value="true" />
+      <created>1748184383916</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1748184383916</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creating enviroment" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating enviroment" />
+    <MESSAGE value="optimalization" />
+    <MESSAGE value="Network" />
+    <option name="LAST_COMMIT_MESSAGE" value="Network" />
   </component>
 </project>
