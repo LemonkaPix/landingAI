@@ -142,8 +142,8 @@ for episode in range(episodes):
 
         if done:
             average_loss = total_mse_loss / step_counter if  step_counter > 0 else 0
-            print(f'Episode: {episode+1}/{episodes}, Reward: {total_reward:.2f},'
-                  f'Epsilion: {agent.epsilion_greedy:.3f}, MSE: {total_mse_loss:.3f},'
+            print(f'Episode: {episode+1}/{episodes}\tReward: {total_reward:.2f}\t'
+                  f'Epsilion: {agent.epsilion_greedy:.3f}\tMSE: {total_mse_loss:.3f}\t'
                   f'Loss: {math.sqrt(total_mse_loss):.2f}')
             rewards_history.append(total_reward)
             epsilion_history.append(agent.epsilion_greedy)
